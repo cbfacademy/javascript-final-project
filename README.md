@@ -28,11 +28,49 @@ You and your study group will work as an agile team to create an animated, inter
 
 ## 📁 Starter Files 📂
 
-We've provided `index.html` and `js/data.js` to kickstart your project. Feel free to add more data, but ensure the minimum data provided is displayed in your timeline.
+We have provided two files to get you started:
+
+1. `index.html`
+1. `js/data.js`
+
+### HTML 🖥️
+
+The provided `index.html` includes:
+
+```html
+<script type="module" src="js/index.js"></script>
+```
+
+Having `type="module"` means you can the ES6 feature `modules` (refer to the slides for a reminder of what `modules` are). `src="js/index.js"` indicates your main javascript file must be named `index.js` within the `js` directory.
+
+### Data 📊
+
+We have provided an array of objects with the data that should be displayed in your timeline. This data can be found in the `js/data.js` file and must be imported into your `js/index.js` so you can use it. If you choose, you can add more data to the file, but this is the **minimum amount** of data you must display in your timeline.
 
 ## 📈 Project Criteria 📉
 
-Except for step 1, all HTML should be added via JavaScript. Your CSS styling should be in a folder named `css` with a primary stylesheet called `main.css`. The site must be deployed to Netlify and your site's status badge added to this file (`README.md`).
+The only HTML you should add to the `body` is in step 1. Everything else should be done in JavaScript.
+
+1. In your HTML file add a `<div>` with the class name `timeline`.
+1. Loop over the provided **array** of objects to create to the summary card of each timeline item with:
+   1. A `div` with the class name `timeline-item`. This `div` is your container for your summary card and everything for the summary card must be inside of it. Inside the `div` should be:
+      1. `h2` with the class name `timeline-item-title`. The title of each timeline item needs to be here
+      1. `span` with the class name `timeline-item-date`. This should have the date of each timeline item
+      1. The element that displays the summary text must have the class name `timeline-item-summary`
+      1. The element that opens the modal so that a visitor can see full information must have the class name `timeline-item-more-info`
+1. Inside the modal (where the full information should be displayed) you must include the following:
+   1. The container `div` must have the id `modal-container`
+   1. The date must have the id `modal-date`
+   1. The title must have the id `modal-title`
+   1. The image must have the id `modal-image`
+   1. The full description must have the id `modal-full-description`
+   1. The element that closes the modal must have the id `modal-close-button`
+1. Create an external stylesheet here `css/main.css` (see [CSS](#css) for more info)
+1. [Deployed to Netlify](https://docs.netlify.com/site-deploys/create-deploys/) and your [site's status badge](https://docs.netlify.com/monitor-sites/status-badges/) added to this file (`README.md`)
+
+### CSS 🎨
+
+All styling (CSS) is completely up to you, but must be in a folder named `css` with a primary stylesheet called `main.css`.
 
 ## 📤 How to Submit 📥
 
